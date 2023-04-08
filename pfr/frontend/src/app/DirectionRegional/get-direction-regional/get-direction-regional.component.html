@@ -1,0 +1,29 @@
+<div class="container">
+    <h2>Direction Regionals</h2>
+    <button type="button" class="btn btn-primary btn-lg mb-3">Ajouter une Direction Regional</button>
+    <table class="table table-dark table-striped">
+      <thead>
+        <tr>
+          <th>Code Direction</th>
+          <th>Libelle Direction</th>
+          <th>Lieu Archive</th>
+          <th>Lieu Archive Sec Age</th>
+          <th>Update</th>
+          <th>Delete</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let direction of directionRegionals ">
+          
+          <td>{{ direction.codeDirection }}</td>
+          <td>{{ direction.libelleDirection }}</td>
+          <td>{{ direction.lieuArchive }}</td>
+          <td>{{ direction.lieuArchiveSecAge }}</td>
+          <td><button type="button" class="btn btn-warning"  (click)="openModal(direction)">update</button></td>
+          <td><button type="button" class="btn btn-danger" (click)="deleteDirectionRegional(direction.codeDirection)">Delete</button></td>
+          
+        </tr>
+      </tbody>
+    </table>
+</div>
+
